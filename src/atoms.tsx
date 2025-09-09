@@ -22,10 +22,11 @@ export const toDoSelector = selector({
     const toDos = get(toDoState);
     const category = get(categoryState);
 
-    return [
-        toDos.filter((toDo) => toDo.category === "TO_DO")
-       ,toDos.filter((toDo) => toDo.category === "DOING")
-       ,toDos.filter((toDo) => toDo.category === "DONE")
-    ];
+    // return [
+    //     toDos.filter((toDo) => toDo.category === "TO_DO")
+    //    ,toDos.filter((toDo) => toDo.category === "DOING")
+    //    ,toDos.filter((toDo) => toDo.category === "DONE")
+    // ];
+    return toDos.filter((toDo) => toDo.category === category);
    }
 });
